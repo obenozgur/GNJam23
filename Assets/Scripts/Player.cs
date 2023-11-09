@@ -39,9 +39,10 @@ public class Player : MonoBehaviour
         // Check if the colliding object has a specific tag
         if (other.gameObject.CompareTag("Wall"))
         {
-            Debug.Log("Collision detected with object tagged as Wall");
+            Debug.Log("Trigger entered with object tagged as 'OtherObjectTag'");
             
             // You can perform additional actions or logic here
         }
     }
+
 }
