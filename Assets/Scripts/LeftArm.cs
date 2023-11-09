@@ -6,6 +6,7 @@ public class LeftArm : MonoBehaviour
 {
     // Rotation speed in degrees per second
     public float rotationSpeed = 180f;
+    public bool marked = false;
 
     // Update is called once per frame
     void Update()
@@ -16,6 +17,15 @@ public class LeftArm : MonoBehaviour
             // Rotate the LeftArm in the Z-axis
             float rotationAmount = rotationSpeed * Time.deltaTime;
             transform.Rotate(Vector3.forward, rotationAmount);
+        }
+    }
+    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("LeftArm"))
+        {
+            Debug.Log("LeftArm");
+            marked = true;
         }
     }
 }

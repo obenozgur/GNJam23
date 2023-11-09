@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float TOLERANCE = 0.5f;
+    public LeftArm leftArm;
     
     // Start is called before the first frame update
     void Start()
@@ -26,12 +27,8 @@ public class Player : MonoBehaviour
             Debug.Log("Teleporting!");
             transformPosition.z = 0;
             transform.position = transformPosition;
+            leftArm.marked = false;
         }
-        //if (Input.GetKey(KeyCode.W))
-        //{
-            // Move the player forward
-        //    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        //}
     }
     
     void OnTriggerEnter(Collider other)
@@ -39,9 +36,11 @@ public class Player : MonoBehaviour
         // Check if the colliding object has a specific tag
         if (other.gameObject.CompareTag("Wall"))
         {
-            Debug.Log("Trigger entered with object tagged as 'OtherObjectTag'");
-            
-            // You can perform additional actions or logic here
+            Debug.Log("Wall");
+            if (!leftArm.marked)
+            {
+                leftArm.gameObject.SetActive(false);
+            }
         }
     }
 
