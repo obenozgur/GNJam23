@@ -33,4 +33,15 @@ public class Player : MonoBehaviour
         //    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         //}
     }
+    
+    void OnTriggerEnter(Collider other)
+    {
+        // Check if the colliding object has a specific tag
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("Collision detected with object tagged as Wall");
+            
+            // You can perform additional actions or logic here
+        }
+    }
 }
