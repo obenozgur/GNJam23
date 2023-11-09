@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float TOLERANCE = 0.1f;
+    public float TOLERANCE = 0.5f;
     
     // Start is called before the first frame update
     void Start()
