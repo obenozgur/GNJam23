@@ -39,13 +39,6 @@ public class LeftLeg : MonoBehaviour
                 transform.Rotate(Vector3.forward, rotationAmount);   
             }
         }
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            float rotationAmount = rotationSpeed * Time.deltaTime;
-            transform.Rotate(Vector3.back, rotationAmount);
-            transform.rotation = defaultRotation;
-        }
     }
     
     void OnTriggerEnter(Collider other)
