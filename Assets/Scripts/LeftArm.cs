@@ -4,57 +4,49 @@ using UnityEngine;
 
 public class LeftArm : MonoBehaviour
 {
-    // Rotation speed in degrees per second
+    private const float RotationTolerance = 0.01f;
     public float rotationSpeed = 180f;
-    public float rotationRange = 180f;
-    public bool leftArmMarked = false;
-    private bool isRotating = false;
-    private Quaternion defaultLocation;
-    private Quaternion targetLocation;
+    private const float ReverseRotationMultiplier = 0.8f; 
+    public bool isMarked = false;
+    private Quaternion defaultRotation;
+    private Quaternion targetRotation;
 
     void Start()
     {
-        //store default location
-        defaultLocation = transform.rotation;
+        defaultRotation = transform.rotation;
+        targetRotation = new Quaternion();
+        targetRotation.x = 0.0f;
+        targetRotation.y = 0.0f;
+        targetRotation.z = 0.25f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Check if the "A" key is pressed
         if (Input.GetKey(KeyCode.A))
         {
-            // Rotate the LeftArm in the Z-axis
-            isRotating = true;
-            targetLocation = defaultLocation * Quaternion.Euler(0, 0, rotationRange);
-        }
-
-        if (isRotating)
-        {
-             //rotate the left arm towards the target lotation
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetLocation, rotationSpeed * Time.deltaTime);
-
-            if (Quaternion.Angle(transform.rotation, targetLocation) < 0.01f)
+            if (!(transform.rotation.z >= targetRotation.z - RotationTolerance && transform.rotation.z <= RotationTolerance + targetRotation.z))
             {
-                //the left arm has reached the target lotation
-                isRotating = false;
+                float rotationAmount = rotationSpeed * Time.deltaTime;
+                transform.Rotate(Vector3.back, rotationAmount);
             }
         }
         else
         {
-            //player releases the key it'll return to the default position
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, defaultLocation, rotationSpeed * Time.deltaTime);
+            if (!(transform.rotation.z >= defaultRotation.z - RotationTolerance && transform.rotation.z <= RotationTolerance + defaultRotation.z))
+            {
+                float rotationAmount = rotationSpeed * ReverseRotationMultiplier * Time.deltaTime;
+                transform.Rotate(Vector3.forward, rotationAmount);   
+            }
         }
     }
 
-
-
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("LeftArm"))
         {
             Debug.Log("LeftArm");
-            leftArmMarked = true;
+            isMarked = true;
         }
     }
 }
