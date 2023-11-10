@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftArm : MonoBehaviour
+public class LeftLeg : MonoBehaviour
 {
     // Rotation speed in degrees per second
     public float rotationSpeed = 180f;
     public float rotationRange = 180f;
-    public bool leftArmMarked = false;
+    public bool leftLegMarked = false;
     private bool isRotating = false;
     private Quaternion defaultLocation;
     private Quaternion targetLocation;
@@ -22,7 +22,7 @@ public class LeftArm : MonoBehaviour
     void Update()
     {
         // Check if the "A" key is pressed
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.S))
         {
             // Rotate the LeftArm in the Z-axis
             isRotating = true;
@@ -51,10 +51,10 @@ public class LeftArm : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("LeftArm"))
+        if (other.gameObject.CompareTag("LeftLeg"))
         {
-            Debug.Log("LeftArm");
-            leftArmMarked = true;
+            Debug.Log("LeftLeg");
+            leftLegMarked = true;
         }
     }
 }

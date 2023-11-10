@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     public float moveSpeed = 5f;
     public float TOLERANCE = 0.5f;
     public LeftArm leftArm;
+    public LeftLeg leftLeg;
+    
+    
     
     // Start is called before the first frame update
     void Start()
@@ -27,20 +30,28 @@ public class Player : MonoBehaviour
             Debug.Log("Teleporting!");
             transformPosition.z = 0;
             transform.position = transformPosition;
-            leftArm.marked = false;
+            leftArm.leftArmMarked = false;
+            leftLeg.leftLegMarked = false;
+
         }
     }
     
     void OnTriggerEnter(Collider other)
     {
         // Check if the colliding object has a specific tag
-        if (other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Wall") && other.gameObject.layer == LayerMask.NameToLayer("Default"))
         {
             Debug.Log("Wall");
-            if (!leftArm.marked)
+            if (!leftArm.leftArmMarked)
             {
                 leftArm.gameObject.SetActive(false);
             }
+            else if (!leftLeg.leftLegMarked)
+            {
+                Debug.Log("Not Marked");
+                leftLeg.gameObject.SetActive(false);
+            }
+            
         }
     }
 
