@@ -18,7 +18,6 @@ public class LeftLeg : MonoBehaviour
         targetRotation.x = 0.0f;
         targetRotation.y = 0.0f;
         targetRotation.z = -0.7f;
-
     }
 
     void Update()
