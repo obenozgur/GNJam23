@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,8 +174,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.11617565, y: 0.1031819, z: 0.11876}
-  m_Center: {x: -0.75, y: -0.39, z: -0.13}
+  m_Size: {x: 0.13941084, y: 0.12381828, z: 0.142512}
+  m_Center: {x: -0.8, y: -0.55, z: -0.13}
 --- !u!1 &17347757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,7 +2374,7 @@ Transform:
   m_GameObject: {fileID: 1188354665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.292, y: -0.2601, z: 0}
+  m_LocalPosition: {x: 0.309, y: -0.2601, z: 0}
   m_LocalScale: {x: 0.2777778, y: 0.18724908, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2399,8 +2399,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.11617565, y: 0.1031819, z: 0.11876}
-  m_Center: {x: -0.75, y: -0.39, z: -0.13}
+  m_Size: {x: 0.13941084, y: 0.12381828, z: 0.142512}
+  m_Center: {x: -0.8, y: -0.55, z: -0.13}
 --- !u!1 &1276979283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,8 +2525,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 180
-  rotationRange: 270
-  leftArmMarked: 0
+  rotationRange: 180
+  isMarked: 0
 --- !u!65 &1283086112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3350,7 +3350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  TOLERANCE: 0.01
   leftArm: {fileID: 1283086111}
   leftLeg: {fileID: 428587522}
 --- !u!54 &1560777960
@@ -4967,15 +4966,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1284340420020184334, guid: 96db66ae391e555458f5030c271f7195, type: 3}
       propertyPath: m_Center.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1284340420020184334, guid: 96db66ae391e555458f5030c271f7195, type: 3}
       propertyPath: m_Center.y
-      value: -0.54
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 1284340420020184334, guid: 96db66ae391e555458f5030c271f7195, type: 3}
       propertyPath: m_Center.z
-      value: 0
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 1899332303532418628, guid: 96db66ae391e555458f5030c271f7195, type: 3}
       propertyPath: m_LocalPosition.x
