@@ -5,6 +5,6 @@ public class ExitButtonController : ButtonController
 {
     private void OnMouseDown()
     {
-        Debug.Log("Exit");
+        Application.Quit();
     }
 }
