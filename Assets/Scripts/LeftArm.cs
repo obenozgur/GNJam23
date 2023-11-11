@@ -17,7 +17,7 @@ public class LeftArm : MonoBehaviour
         targetRotation = new Quaternion();
         targetRotation.x = 0.0f;
         targetRotation.y = 0.0f;
-        targetRotation.z = 0.25f;
+        targetRotation.z = 0.45f;
     }
 
     void Update()
