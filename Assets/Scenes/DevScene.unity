@@ -1978,6 +1978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578426689}
   - component: {fileID: 578426690}
+  - component: {fileID: 578426691}
   m_Layer: 0
   m_Name: Gap
   m_TagString: Untagged
@@ -2052,6 +2053,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &578426691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578426688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6605d18b37a1a419bad8bc482b5a9b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589726012
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,6 +5393,7 @@ MonoBehaviour:
   rightLeg: {fileID: 1855341569}
   gameManager: {fileID: 1520451374}
   wall: {fileID: 1436316804}
+  gap: {fileID: 578426691}
 --- !u!54 &1560777960
 Rigidbody:
   m_ObjectHideFlags: 0

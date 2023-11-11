@@ -14,7 +14,6 @@ public class Wall : MonoBehaviour
             string spritePath = $"Wall/dodging_wall_({i+1})";
             spriteArray[i] = Resources.Load<Sprite>(spritePath);
         }
-        
     }
     
     public void UpdateWall()

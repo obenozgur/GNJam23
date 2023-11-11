@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     public GameManagerMenu gameManager;
     public Wall wall;
+    public Gap gap;
     private bool isDead = false;
     
     void Update()
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
         if (transformPosition.z >= 15 - PositionTolerance && transformPosition.z <= 15 + PositionTolerance)
         {
             wall.UpdateWall();
+            gap.UpdateGap();
             transformPosition.z = 0;
             transform.position = transformPosition;
             leftArm.isMarked = false;
