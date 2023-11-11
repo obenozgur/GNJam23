@@ -17,10 +17,10 @@ public class Player : MonoBehaviour
     public Gap gap;
     private bool isDead = false;
 
-    // private void Start()
-    // {
-    //     UpdateObstacle();
-    // }
+    private void Start()
+    {
+        UpdateObstacle();
+    }
 
     void Update()
     {

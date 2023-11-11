@@ -2066,8 +2066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftArmCollider: {fileID: 1593966543}
-  leftLegCollider: {fileID: 625329853}
-  rightArmCollider: {fileID: 575930093}
+  leftLegCollider: {fileID: 575930093}
+  rightArmCollider: {fileID: 625329853}
   rightLegCollider: {fileID: 1924629972}
 --- !u!1 &589726012
 GameObject:
