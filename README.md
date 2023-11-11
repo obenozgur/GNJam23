@@ -1,7 +1,18 @@
 # Game Design Document - project 02
+## 0.Credits and others
+### credits
+Oben  Yozgyur  @oben     Programmer    
 
+Wanqiu  Lin  @kelerm     Game designer, 2D Artist   
+
+Mico  Mendoza  @frico    Programmer   
+
+Jiayi  Li  @Jiayi Li     Game designer, 2D Artist/3D Artist   
+
+### Estimate work hours : 90h
+### (List of tools is shown in 8.2)
 ## 1.Game Name 
-Tbc
+Crossing the Liminal
 
 ## 2.Game Overview
 
@@ -104,7 +115,10 @@ The level will change and adjust when the body part of the doll is missed. If th
        pc
 
 ### 8.2.Development software
-      - unity
+      - Unity
+      - Figma
+      - Photoshop
+      - 3DsMax
 
 ## 9.Game Art  assets, how they are being developed.  Intended style.
       voodoo doll 
