@@ -1,10 +1,10 @@
 # Game Design Document - project 02
 ## 0.Credits and others
 ### credits
-Oben  Yozgyur  @oben     Programmer
-wanqiu  lin  @kelerm     Game designer, 2D Artist
-Mico  Mendoza  @frico    Programmer
-Jiayi  Li  @Jiayi Li     Game designer, 2D Artist/3D Artist
+Oben  Yozgyur  @oben     Programmer   
+wanqiu  lin  @kelerm     Game designer, 2D Artist  
+Mico  Mendoza  @frico    Programmer  
+Jiayi  Li  @Jiayi Li     Game designer, 2D Artist/3D Artist  
 ### Estimate work hours : 90h
 ### (List of tools is shown in 8.2)
 ## 1.Game Name 
