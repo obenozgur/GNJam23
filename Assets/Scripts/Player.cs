@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
     private const float PositionTolerance = 0.5f;
     public LeftArm leftArm;
     public LeftLeg leftLeg;
+    public RightArm rightArm;
+    public RightLeg rightLeg;
+
+    public GameManagerMenu gameManager;
+    private bool isDead = false;
     
     void Update()
     {
@@ -22,6 +27,21 @@ public class Player : MonoBehaviour
             transform.position = transformPosition;
             leftArm.isMarked = false;
             leftLeg.isMarked = false;
+            rightArm.isMarked = false;
+            rightLeg.isMarked = false;
+        }
+
+        if (!leftArm.gameObject.activeSelf && !leftLeg.gameObject.activeSelf &&
+        !rightArm.gameObject.activeSelf && !rightLeg.gameObject.activeSelf && !isDead)
+        {
+            isDead = true;
+            Debug.Log("dead");
+            gameManager.gameOver();
+
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameManager.pauseMenu();
         }
     }
     
@@ -37,6 +57,15 @@ public class Player : MonoBehaviour
             if (!leftLeg.isMarked)
             {
                 leftLeg.gameObject.SetActive(false);
+            }
+
+            if (!rightArm.isMarked)
+            {
+                rightArm.gameObject.SetActive(false);
+            }
+            if (!rightLeg.isMarked)
+            {
+                rightLeg.gameObject.SetActive(false);
             }
         }
     }
