@@ -16,7 +16,12 @@ public class Player : MonoBehaviour
     public Wall wall;
     public Gap gap;
     private bool isDead = false;
-    
+
+    // private void Start()
+    // {
+    //     UpdateObstacle();
+    // }
+
     void Update()
     {
         transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
@@ -25,8 +30,7 @@ public class Player : MonoBehaviour
         
         if (transformPosition.z >= 15 - PositionTolerance && transformPosition.z <= 15 + PositionTolerance)
         {
-            wall.UpdateWall();
-            gap.UpdateGap();
+            UpdateObstacle();
             transformPosition.z = 0;
             transform.position = transformPosition;
             leftArm.isMarked = false;
@@ -43,7 +47,13 @@ public class Player : MonoBehaviour
             gameManager.GameOver();
         }
     }
-    
+
+    private void UpdateObstacle()
+    {
+        wall.UpdateWall();
+        gap.UpdateGap();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Wall") && other.gameObject.layer == LayerMask.NameToLayer("Default"))

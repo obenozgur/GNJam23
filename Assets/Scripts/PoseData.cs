@@ -13,12 +13,12 @@ public static class PoseData
         new Pose(new LimbState[] { LimbState.Down, LimbState.Up, LimbState.Down, LimbState.Up }),
     };
 
-    private static bool IsLimbUp(int poseId, Limb limb)
+    public static bool IsLimbUp(int poseId, Limb limb)
     {
         return _poses[poseId].IsLimbUp(limb);
     }
     
-    private static bool IsLimbDown(int poseId, Limb limb)
+    public static bool IsLimbDown(int poseId, Limb limb)
     {
         return _poses[poseId].IsLimbDown(limb);
     }
