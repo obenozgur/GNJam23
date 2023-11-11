@@ -1,7 +1,7 @@
 # Game Design Document - project 02
 
 ## 1.Game Name 
-Crossing the liminal
+Crossing the Liminal
 
 ## 2.Game Overview
 
