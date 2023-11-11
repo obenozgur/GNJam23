@@ -39,7 +39,6 @@ public class RightLeg : MonoBehaviour
             }
         }
     }
-
     
     void OnTriggerEnter(Collider other)
     {

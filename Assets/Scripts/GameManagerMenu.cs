@@ -21,6 +21,8 @@ public class GameManagerMenu : MonoBehaviour
 
     public void GameOver()
     {
+        player.enabled = false;
+        isGamePaused = true;
         gameOverUI.SetActive(true);
     }
 

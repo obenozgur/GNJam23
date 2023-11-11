@@ -39,7 +39,6 @@ public class LeftArm : MonoBehaviour
             }
         }
     }
-
     
     void OnTriggerEnter(Collider other)
     {
