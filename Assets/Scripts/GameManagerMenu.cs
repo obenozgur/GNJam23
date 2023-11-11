@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,38 +8,43 @@ public class GameManagerMenu : MonoBehaviour
 {
     public GameObject gameOverUI;
     public GameObject pauseGameUI;
-    // Start is called before the first frame update
-    void Start()
+    public bool isGamePaused = false;
+    public Player player;
+
+    private void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape) && !isGamePaused)
+        {
+            PauseMenu();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void gameOver()
+    public void GameOver()
     {
         gameOverUI.SetActive(true);
     }
 
-    public void pauseMenu()
+    public void PauseMenu()
     {
+        player.enabled = false;
+        isGamePaused = true;
         pauseGameUI.SetActive(true);
-
+    }
+    
+    public void Resume()
+    {
+        player.enabled = true;
+        isGamePaused = false;
+        pauseGameUI.SetActive(false);
     }
 
-    public void restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void mainMenu()
+    public void MainMenu()
     {
         SceneManager.LoadScene("MenuScene");
     }
-
-
 }

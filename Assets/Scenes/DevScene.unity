@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1054,7 +1054,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1520451374}
         m_TargetAssemblyTypeName: GameManagerMenu, Assembly-CSharp
-        m_MethodName: mainMenu
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1307,7 +1307,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1520451374}
         m_TargetAssemblyTypeName: GameManagerMenu, Assembly-CSharp
-        m_MethodName: mainMenu
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2109,7 +2109,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1520451374}
         m_TargetAssemblyTypeName: GameManagerMenu, Assembly-CSharp
-        m_MethodName: restart
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2590,7 +2590,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1520451374}
         m_TargetAssemblyTypeName: GameManagerMenu, Assembly-CSharp
-        m_MethodName: restart
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3898,7 +3898,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1520451374}
         m_TargetAssemblyTypeName: GameManagerMenu, Assembly-CSharp
-        m_MethodName: restart
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4824,6 +4824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 983717915}
   pauseGameUI: {fileID: 329244964}
+  isGamePaused: 0
+  player: {fileID: 1560777959}
 --- !u!1 &1534482395
 GameObject:
   m_ObjectHideFlags: 0

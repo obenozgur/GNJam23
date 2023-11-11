@@ -36,12 +36,7 @@ public class Player : MonoBehaviour
         {
             isDead = true;
             Debug.Log("dead");
-            gameManager.gameOver();
-
-        }
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            gameManager.pauseMenu();
+            gameManager.GameOver();
         }
     }
     
@@ -63,6 +58,7 @@ public class Player : MonoBehaviour
             {
                 rightArm.gameObject.SetActive(false);
             }
+            
             if (!rightLeg.isMarked)
             {
                 rightLeg.gameObject.SetActive(false);
