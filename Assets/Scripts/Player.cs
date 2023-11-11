@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 3f;
     private const float PositionTolerance = 0.5f;
     public LeftArm leftArm;
     public LeftLeg leftLeg;
@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public RightLeg rightLeg;
 
     public GameManagerMenu gameManager;
+    public Wall wall;
     private bool isDead = false;
     
     void Update()
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
         
         if (transformPosition.z >= 15 - PositionTolerance && transformPosition.z <= 15 + PositionTolerance)
         {
+            wall.UpdateWall();
             transformPosition.z = 0;
             transform.position = transformPosition;
             leftArm.isMarked = false;
