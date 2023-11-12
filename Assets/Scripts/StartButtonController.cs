@@ -6,6 +6,6 @@ public class StartButtonController : ButtonController
 {
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("DevScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("TutorialScene", LoadSceneMode.Single);
     }
 }

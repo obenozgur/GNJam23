@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     public Wall wall;
     public Gap gap;
     private bool isDead = false;
+    
+    public AudioSource audioSource;
+    public AudioClip pass;
+    
     private void Start()
     {
         UpdateObstacle();
@@ -30,6 +34,7 @@ public class Player : MonoBehaviour
         
         if (transformPosition.z >= 15 - PositionTolerance && transformPosition.z <= 15 + PositionTolerance)
         {
+            audioSource.PlayOneShot(pass);
             UpdateObstacle();
             transformPosition.z = 0;
             transform.position = transformPosition;
