@@ -11,12 +11,12 @@ public class Player : MonoBehaviour
     public LeftLeg leftLeg;
     public RightArm rightArm;
     public RightLeg rightLeg;
+    public ScoreManager sm; //call scoreManager script
 
     public GameManagerMenu gameManager;
     public Wall wall;
     public Gap gap;
     private bool isDead = false;
-
     private void Start()
     {
         UpdateObstacle();
@@ -56,27 +56,34 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Wall") && other.gameObject.layer == LayerMask.NameToLayer("Default"))
+        if (other.gameObject.CompareTag("Wall"))
         {
-            if (!leftArm.isMarked)
+            if(!leftArm.isMarked)
             {
-                leftArm.gameObject.SetActive(false);
+                leftArm.PlayAudioAndDisable();
             }
-            
+           
             if (!leftLeg.isMarked)
             {
-                leftLeg.gameObject.SetActive(false);
+                leftLeg.PlayAudioAndDisable();
             }
 
             if (!rightArm.isMarked)
             {
-                rightArm.gameObject.SetActive(false);
+                rightArm.PlayAudioAndDisable();
             }
             
             if (!rightLeg.isMarked)
             {
-                rightLeg.gameObject.SetActive(false);
+                rightLeg.PlayAudioAndDisable();
+            }
+
+            if(leftArm.isMarked || leftLeg.isMarked || rightArm.isMarked || rightLeg.isMarked)
+            {
+                sm.score++;
             }
         }
+
+       
     }
 }

@@ -10,7 +10,9 @@ public class LeftArm : MonoBehaviour
     public bool isMarked = false;
     private Quaternion defaultRotation;
     private Quaternion targetRotation;
-
+    public AudioSource audioSource;
+    public AudioClip cutOff;
+    private bool isDisabled = false;
     void Start()
     {
         defaultRotation = transform.rotation;
@@ -47,5 +49,17 @@ public class LeftArm : MonoBehaviour
             Debug.Log("LeftArm");
             isMarked = true;
         }
+    }
+
+    public void PlayAudioAndDisable()
+    {
+        if (!isDisabled)
+        {
+            audioSource.PlayOneShot(cutOff);
+            isDisabled = true;
+            gameObject.SetActive(false);
+        }
+
+       
     }
 }

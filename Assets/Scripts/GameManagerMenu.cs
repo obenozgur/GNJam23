@@ -10,6 +10,12 @@ public class GameManagerMenu : MonoBehaviour
     public GameObject pauseGameUI;
     public bool isGamePaused = false;
     public Player player;
+    public AudioSource bgm;
+
+    private void Start()
+    {
+        bgm.Play();
+    }
 
     private void Update()
     {

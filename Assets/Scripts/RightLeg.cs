@@ -10,6 +10,9 @@ public class RightLeg : MonoBehaviour
     public bool isMarked = false;
     private Quaternion defaultRotation;
     private Quaternion targetRotation;
+    public AudioSource audioSource;
+    public AudioClip cutOff;
+    private bool isDisabled = false;
 
     void Start()
     {
@@ -47,5 +50,17 @@ public class RightLeg : MonoBehaviour
             Debug.Log("RightLeg");
             isMarked = true;
         }
+    }
+
+    public void PlayAudioAndDisable()
+    {
+        if (!isDisabled)
+        {
+            audioSource.PlayOneShot(cutOff);
+            isDisabled = true;
+            gameObject.SetActive(false);
+        }
+
+       
     }
 }
