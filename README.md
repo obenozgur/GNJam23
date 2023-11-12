@@ -10,7 +10,16 @@ Mico  Mendoza  @frico    Programmer
 Jiayi  Li  @Jiayi Li     Game designer, 2D Artist/3D Artist   
 
 ### Estimate work hours : 90h
-### (List of tools is shown in 8.2)
+### Tools and Software
+	- Unity  
+ 	- Photoshop
+  	- figma
+   	- 3dsMax
+   	- miro
+### Resources
+	- font : https://www.1001freefonts.com/bighter.font
+ 	- sound effect : https://www.aigei.com/view/121430-45337956.html
+  	- back ground music : https://pixabay.com/music/mystery-tense-horror-background-174809/
 ## 1.Game Name 
 Crossing the Liminal
 
