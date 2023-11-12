@@ -9,6 +9,8 @@ Mico  Mendoza  @frico    Programmer
 
 Jiayi  Li  @Jiayi Li     Game designer, 2D Artist/3D Artist   
 
+Mahdi  Pakpur Haji Agha  @Mahdi    Audio designer
+
 ### Estimate work hours : 90h
 ### Tools and Software
 	- Unity  
